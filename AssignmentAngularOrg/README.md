@@ -1,4 +1,4 @@
-### Angular 12 | Typescript
+### Angular 13 | Typescript
 ## server
 
 Run `ng serve` |  Navigate to `http://localhost:4200/`. The app can detect changes automatically while change in the source files.
@@ -15,7 +15,7 @@ The build artifacts will be in the `dist/` directory.
 
 ## UI framework 
 Angular Material Design 
-`https://v12.material.angular.io/`
+`https://v13.material.angular.io/`
 > shared > material modules 
 this holds all the material module before using 
 require import and export
@@ -24,7 +24,7 @@ require import and export
 bootstrap lang() function have some issue 
 while serving giving language error  
 right in style bootstrap is disabled 
-issue is something related to Angular 12 it self 
+issue is something related to Angular 13 it self 
 
 
 while creating this seed used several refrence from internet and openspurce 
