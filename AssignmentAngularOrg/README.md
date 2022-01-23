@@ -24,6 +24,8 @@ require import and export
 bootstrap lang() function have some issue 
 while serving giving language error  
 right in style bootstrap is disabled 
+issue is something related to Angular 12 it self 
+<img width="465" alt="image" src="https://user-images.githubusercontent.com/45842963/150692475-b3cdeaea-5310-45ef-a0bb-0fc40caa5003.png">
 issue is something related to Angular 13 it self 
 
 
