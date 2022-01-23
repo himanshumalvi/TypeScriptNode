@@ -1,4 +1,4 @@
-import {Observable} from "rxjs/dist/types";
+import {Observable} from "rxjs";
 
 export interface IEmployeeInterface {
     getEmloyee(id: any): Observable<any>;

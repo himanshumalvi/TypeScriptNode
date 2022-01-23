@@ -1,4 +1,4 @@
-import {Observable} from "rxjs/dist/types";
+import {Observable} from "rxjs";
 import {injectable} from "inversify";
 import { IEmployeeInterface } from "../interfaces";
 

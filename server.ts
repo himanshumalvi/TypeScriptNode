@@ -1,8 +1,8 @@
 import 'reflect-metadata';
-import express, { Express } from 'express';
 import {InversifyExpressServer} from 'inversify-express-utils';
 import {Container} from 'inversify';
 import {MODULES} from "./src/app/index";
+import express, {Express} from "express";
 
 var compression = require('compression');
 
