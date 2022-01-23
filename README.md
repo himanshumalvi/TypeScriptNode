@@ -16,3 +16,13 @@
 
 Author 
 ### Himanshu Malvi <himanshumalviya2014@gmail.com>
+
+
+### [pending]
+
+Integration with MongoDB 
+
+tried Mongo Cluster integration didn't work
+need sometime for exploration. 
+
+LIMITATION found > RAM & space issue while development.
