@@ -6,9 +6,12 @@
     "build": "rimraf ./dist && tsc",
     "start:dev": "nodemon",
     "start": "npm run build && node dist/server.js",
+    "dev-server": "tsc-watch --noClear -p tsconfig.json --onSuccess \"node ./dist/server.js\"",
     "start:prod": "node dist/app/server.js",
     "lint": "tslint --project tsconfig.json",
-    "test": "jest"
+    "test": "jest",
+    "watch": "nodemon -e ts -w ./src -x npm run watch:serve",
+    "watch:serve": "ts-node --inspect src/server.ts"
   },
   "author": "Himanshu Malvi <himanshumalsviya2014@gmail.com>",
   "dependencies": {
@@ -26,14 +29,13 @@
     "body-parser": "^1.18.3",
     "compression": "^1.7.3",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.2",
     "inversify": "^4.13.0",
     "inversify-express-utils": "^6.1.0",
     "lodash": "^4.17.21",
     "method-override": "^3.0.0",
     "mongodb": "^3.1.13",
     "mongoose": "^5.4.19",
-    "nodemon": "^2.0.15",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.5.2",
     "rxjs-compat": "^6.6.7",
@@ -41,6 +43,9 @@
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "tsc-watch": "^4.6.0",
     "tslint": "^6.1.3"
   }
 }

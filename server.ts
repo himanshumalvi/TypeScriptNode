@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import {InversifyExpressServer} from 'inversify-express-utils';
+import {getRouteInfo, InversifyExpressServer} from 'inversify-express-utils';
 import {Container} from 'inversify';
 import {MODULES} from "./src/app/index";
 import express, {Express} from "express";
@@ -19,15 +19,14 @@ const server = new InversifyExpressServer(container, null, null, app)
             return res.status(500).send();
         })
     });
-/**
- * Start Express server.
- */
-app.all("/*", (req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    next();
-});
 
 
 const serverInstance = server.build();
 serverInstance.listen(8080);
+
+const routeInfo = getRouteInfo(container);
+app.set("router infog",routeInfo);
+app.listen(app.get("port"), () => {
+    console.log("server started at http://localhost:" + routeInfo.entries().next());
+});
+module.exports = app;

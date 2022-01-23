@@ -1,4 +1,4 @@
-import {Observable} from "rxjs";
+import {Observable, pipe} from "rxjs";
 import {injectable} from "inversify";
 import { IEmployeeInterface } from "../interfaces";
 
@@ -10,7 +10,11 @@ export class EmployeeService implements IEmployeeInterface {
     }
 
     getEmloyee(id: any): Observable<any> {
-        return undefined;
+        let newVar = new Observable<any>((observer) => {
+            observer.next("Hello Employees");
+            return observer.complete();
+        });
+        return newVar;
     }
 
 }
