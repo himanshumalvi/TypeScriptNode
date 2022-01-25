@@ -1,0 +1,45 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Test {
+
+    public static void main(String[] args){
+        int[] f = new int[2];
+        f[0] = 1 ;
+        f[1] = 3 ;
+        int[] s = new int[1];
+        s[0] = 2;
+
+        System.out.print(median(f,s));
+    }
+
+
+    public static int median(int[] first, int[] sec){
+        int f = 0;
+        int s = 0;
+        int[] cpy = new int[first.length+sec.length];
+        int min =0;
+        int count =0;
+        while((f<first.length || s<sec.length) && count<(first.length+sec.length)){
+            if(f<first.length  && sec[s]>first[f]){
+                min = first[f];
+                cpy[count] = min;
+                f++;
+            }else if(s<sec.length && first[f]>sec[s]){
+                min = sec[s];
+                cpy[count] = min;
+                s++;
+            }
+            count++;
+        }
+
+        if(cpy.length%2 == 0 ){
+            int a = cpy.length/2;
+            int b = cpy.length/2 +1;
+            return (cpy[a] + cpy[b])/2;
+        }else{
+            return cpy.length/2;
+        }
+
+    }
+}
